@@ -47,7 +47,7 @@ void draw() {
   text("Box count: " + boxes.size(), width - 120, 30);
   text("Wind speed: " + windSpeed, width - 120, 60);
 
-  PImage logoVvTP = loadImage("/media/freek/DataUbuntu/Freek/Test/Processing/OtherStuff/VvTP/vvtp-logo-gray.png");
+  PImage logoVvTP = loadImage("vvtp-logo-gray.png");
   float logoWidth = 1533 / 4;
   float logoHeight = 1404 / 4;
   image(logoVvTP, (width - logoWidth) / 2, 50, logoWidth, logoHeight);
