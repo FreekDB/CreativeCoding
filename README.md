@@ -1,3 +1,3 @@
 # Creative Coding
 
-Processing examples for Creative Coding workshop on the November 13th, 2020!
+Processing examples for the Creative Coding workshop on April 19th, 2021!

@@ -1,6 +1,6 @@
 // Creative Coding workshop: Canvas and Coordinates.
 // Freek de Bruijn.
-// November, 2020.
+// April, 2021.
 
 color backgroundColor = color(100, 150, 200);
 color normalStrokeColor = color(255);
@@ -48,7 +48,7 @@ void mouseMoved() {
 
   int distanceX = abs(mouseX - middleX);
   int distanceY = abs(mouseY - middleY);
-  
+
   if (distanceX < 28 && !attractedY) {
     mouseX = middleX;
     attractedX = true;
@@ -63,8 +63,8 @@ void mouseMoved() {
   }
 }
 
-// Click left mouse button: switch the grid on or off. 
-// Click right mouse button: switch add one to coordinates on or off. 
+// Click the left mouse button: switch the grid on or off.
+// Click the right mouse button: switch add one to coordinates on or off.
 void mouseClicked() {
   if (mouseButton == LEFT) {
     showGrid = !showGrid;
@@ -78,19 +78,19 @@ void mouseClicked() {
 // Draw the grid lines.
 void drawGrid() {
   stroke(gridStrokeColor);
-  
+
   int gridSpace = 100;
-  
+
   // Horizontal grid lines.
   for (int y = 0; y < height; y += gridSpace) {
     line(0, y, width - 1, y);
   }
-  
+
   // Vertical grid lines.
   for (int x = 0; x < width; x += gridSpace) {
     line(x, 0, x, height - 1);
   }
-  
+
   stroke(normalStrokeColor);
 }
 
@@ -98,7 +98,7 @@ void drawGrid() {
 void drawCornerCoordinates() {
   String textTopRight = (width + highOffset) + ", " + lowOffset;
   String textBottomRight = (width + highOffset) + ", " + (height + highOffset);
-  
+
   int spaceRightTop = 6 + int(textWidth(textTopRight));
   int spaceRightBottom = 6 + int(textWidth(textBottomRight));
 
@@ -108,7 +108,7 @@ void drawCornerCoordinates() {
   text(textBottomRight, width - spaceRightBottom, height - spaceBottom);
 }
 
-// Draw the mouse coordinates and crosshairs.
+// Draw the mouse coordinates and the cross hairs.
 void drawMouseCoordinates() {
   int far = 28;
   int close = 12;
