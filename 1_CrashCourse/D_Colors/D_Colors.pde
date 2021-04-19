@@ -8,7 +8,7 @@ color backgroundColor = color(100, 150, 200);
 // Stroke color: white. This color is used when drawing lines and when drawing borders around shapes.
 color strokeColor = color(255);
 
-// Fill color: yellow. This color is used when filling shapes and when draw text.
+// Fill color: yellow. This color is used when filling shapes and when drawing text.
 color fillColor = color(250, 180, 20);
 
 void setup() {

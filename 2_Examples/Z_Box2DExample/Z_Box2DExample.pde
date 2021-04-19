@@ -4,12 +4,12 @@ import org.jbox2d.common.*;
 import org.jbox2d.dynamics.*;
 
 
-// Inspiration from:
+// Modified from:
 // https://www.youtube.com/playlist?list=PLRqwX-V7Uu6akvoNKE4GAxf6ZeBYoJ4uh
 // https://github.com/shiffman/Box2D-for-Processing/tree/master/Box2D-for-Processing/dist/box2d_processing/examples/box2d_exercise_solved
 
 // Ideas:
-// - Circles.
+// - Circles (see https://github.com/jbox2d/jbox2d/blob/master/jbox2d-library/src/main/java/org/jbox2d/collision/shapes/CircleShape.java).
 // - Change gravity?
 
 
