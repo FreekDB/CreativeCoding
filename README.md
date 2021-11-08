@@ -1,6 +1,6 @@
 # Creative Coding
 
-Processing examples for the Creative Coding workshop on April 19th, 2021!
+Processing examples for the Creative Coding workshops on November 11th and 12th, 2021!
 
 First steps:
 1. Download and extract ZIP with all files from this repository (via the green Code button).
