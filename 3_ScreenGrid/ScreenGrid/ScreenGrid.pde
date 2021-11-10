@@ -23,10 +23,10 @@ import org.apache.commons.net.ntp.TimeInfo;
 
 
 String[] programs = new String[] {"Periodic Table", "Newton's Cradle", "Lines Through Point", "Rainbow", "Confetti", "Maze"};
-int activeProgramIndex = 5;
+int activeProgramIndex = 0;
 String activeProgram = programs[activeProgramIndex];
 
-boolean drawBuildingFacade = false;
+boolean drawBuildingFacade = true;
 
 
 // Periodic Table.
@@ -48,7 +48,7 @@ float angle2 = 0;
 
 
 // Maze
-MultiMazeView mazeView;
+MultiMazeView multiMazeView;
 
 
 void setup() {
@@ -77,9 +77,9 @@ private void createMaze() {
 
   new MazeGenerator(maze, randomGenerator).generateMaze();
   
-  mazeView = new MultiMazeView(maze);
+  multiMazeView = new MultiMazeView(maze);
   
-  maze.printMaze();
+  // maze.printMaze();
 }
 
 void draw() {
@@ -106,7 +106,7 @@ void draw() {
   } else if (activeProgram == "Confetti") {
     drawConfetti();
   } else if (activeProgram == "Maze") {
-    mazeView.drawMaze();
+    multiMazeView.drawMaze();
   }
 
   if (drawBuildingFacade) {
@@ -281,14 +281,18 @@ void keyPressed() {
   } else if (key == 'f') {
     drawBuildingFacade = !drawBuildingFacade;
   } else if (key == 's') {
-    mazeView.toggleExtraBetweenGroups();
+    multiMazeView.toggleExtraBetweenGroups();
   }
 }
 
 private void selectNextProgram() {
   activeProgramIndex = (activeProgramIndex + 1) % programs.length;
   activeProgram = programs[activeProgramIndex];
-  
+
+  if (activeProgram == "Maze") {
+    drawBuildingFacade = false;
+  }
+
   setFrameRate();
 }
 

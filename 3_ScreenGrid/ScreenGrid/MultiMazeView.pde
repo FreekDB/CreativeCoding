@@ -87,7 +87,7 @@ public class MultiMazeView {
   }
   
   public void toggleExtraBetweenGroups() {
-    extraBetweenGroupsX = 60 - extraBetweenGroupsX;
-    extraBetweenGroupsY = 60 - extraBetweenGroupsY;
+    extraBetweenGroupsX = 60 - BORDER_SIZE - extraBetweenGroupsX;
+    extraBetweenGroupsY = 60 - BORDER_SIZE - extraBetweenGroupsY;
   }
 }
