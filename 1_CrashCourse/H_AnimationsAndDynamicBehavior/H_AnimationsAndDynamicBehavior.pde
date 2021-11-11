@@ -1,5 +1,7 @@
 // Creative Coding workshop: Animations and Dynamic Behavior.
 // Adaptation of the Bouncing Balls example on Happy Coding.
+// The circles move slower when they get close to the mouse cursor.
+// Left click increases the frame rate and right click decreases.
 // Link: https://happycoding.io/examples/processing/arrays/bouncing-balls
 // Freek de Bruijn.
 // April, 2021.
@@ -79,6 +81,9 @@ void draw() {
     // Draw a circle with the right coordinates and size for this ball.
     circle(x[ballIndex], y[ballIndex], size[ballIndex]);
   }
+
+  fill(0);
+  text("Frame rate: " + currentFrameRate, 20, 28);
 }
 
 // Click the left mouse button: increase the frame rate.
